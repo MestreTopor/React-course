@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/MestreTopor/React-course/issues"
   },
-  "homepage": "https://github.com/MestreTopor/React-course#readme"
+  "homepage": "https://github.com/MestreTopor/React-course#readme",
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-react": "^7.21.5"
+  }
 }

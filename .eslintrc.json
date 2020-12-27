@@ -1,5 +1,5 @@
 {
-    "env": { 
+    "env": {
         "browser": true,
         "commonjs": true,
         "es6": true,
@@ -20,12 +20,12 @@
     ],
     "rules": {
         "no-unused-vars": ["error", { "caughtErrorsIgnorePattern": "^ignore" }],
-    	"react/jsx-uses-react": 1,
+    	  "react/jsx-uses-react": 1,
         "react/jsx-uses-vars": "error",
 
         "linebreak-style": [
             "error",
-            "unix"
+            "windows"
         ],
         "babel/new-cap": 1,
         "babel/camelcase": 1,
