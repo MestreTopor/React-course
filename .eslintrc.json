@@ -20,12 +20,14 @@
     ],
     "rules": {
         "no-unused-vars": ["error", { "caughtErrorsIgnorePattern": "^ignore" }],
+        // "no-unused-vars": ["error", {"varsIgnorePattern": "React"}],
     	  "react/jsx-uses-react": 1,
         "react/jsx-uses-vars": "error",
 
         "linebreak-style": [
             "error",
             "windows"
+            // "unix"
         ],
         "babel/new-cap": 1,
         "babel/camelcase": 1,

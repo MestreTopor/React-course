@@ -48,8 +48,6 @@
 	globalCloneObjectName.age = 55;	
 	console.log(globalCloneObjectName);
   console.log(objectName);
-  
-
 // ------------
 
 // Свойства:
@@ -71,7 +69,9 @@
 	window.scrollTo(10, 400); 																		 // Скролит от положения текущей страницы, а не положения по оси X на 10px и по оси Y 400px 
 // ------------
 
-// Методы:	
+// Методы:
+  const sumSponsors = ['Свободная','касса','🤙'];
+  console.log.apply(null, sumSponsors);                          // .apply() каким-то раком переводит массив в строку
 	console.dir(objectName); 																			 // Позволяет увидеть все свойства объекта
 	console.log(document.querySelector('.btn').matches('.black')); // Проверяет есть ли у элемента .btn класс .black
 
@@ -97,15 +97,15 @@
 // ------------
 
 // Методы перебора массивов
-	const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemart'];
-	const shortNames = names.filter(name => {											// .filter() - метод который перебирает массив и возвращает те элементы которые поподают под выборку
-		return name.length < 5;																			// Возвращаем те значения с массива, у которых длина меньше 5 символов
-		});
+  const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemart'];
+	const shortNames = names.filter(name => { // .filter() - метод который перебирает массив и возвращает те элементы которые поподают под выборку
+		return name.length < 5;                 // Возвращаем те значения с массива, у которых длина меньше 5 символов
+  });
 	console.log(shortNames);
 	// ------------
 
-	let asnwer = ['HeLLo', 'gOOd', 'oK'];
-	asnwer = asnwer.map(item => {																	// .map() - метод который позволяет изменять значения в масиве не создавая копию    	
+  let asnwer = ['HeLLo', 'gOOd', 'oK'];
+	asnwer = asnwer.map(item => { // .map() - метод который позволяет изменять значения в масиве не создавая копию
 		return item.toLowerCase();												
 	});
 	console.log(asnwer);
@@ -244,7 +244,6 @@
   
 // Контекст вызова this
 	function showThis1() {
-		// eslint-disable-next-line babel/no-invalid-this
 		console.log(this);      // Такой способ this вернет объект window, а при "use strict" вернет undefined
 	}
 	showThis1();
@@ -256,7 +255,7 @@
 			console.log(this);    // Вызов контекста (this) внутри метода объекта, будет ссылаться на сам объект в котором он находится
 
 			function shout() {
-				// console.log(this);  // Вернет udefined или объект window, потому что функция внутри метода не является методом объекта, это просто функция
+				console.log(this);  // Вернет udefined или объект window, потому что функция внутри метода не является методом объекта, это просто функция
 			}
 			shout();
 
@@ -269,7 +268,6 @@
 	// ------------
 
 	function sayName (surname, age) {
-		// eslint-disable-next-line babel/no-invalid-this
 		console.log(this);
 		console.log(`${this.name} ${surname}, ему ${age} лет`);
 	}
@@ -1058,3 +1056,28 @@ Promise.race([test(1000), test(2000)]).then(() => { // Запускается п
     //     <script src="script.js"></script>
     //   </body>
     // </html>
+//--------------------
+
+
+// npm
+  // React App
+  // npm install -g create-react-app
+  // npx create-react-app react-app    // Создается папка с приложением test-app 
+  // cd test-app
+  // npm start
+
+  // Babel
+  // npm install --save-dev @babel/core @babel/cli @babel/preset-env
+  // npm install --save @babel/polyfill
+
+  // For Babel core.js
+  // npm i --save-dev core-js
+
+
+// React
+
+  // HTML в React
+
+  // In index.js
+  // const h1 = <h1>Hello!</h1>;                            // Препроцессор jsx переведет html написанный в переменной в корректный синтаксис
+  // RectDOM.render(elem, document.getElementById('root')); 
